@@ -1,9 +1,10 @@
 .pb_form_v1 {
-	padding: 50px;
-	@include pb_box-shadow(1px, 11px, 68px, -20px, rgba($black,.75));
-	@include media-breakpoint-down(md) {
-		padding: 30px;
-	}
+    padding: 10px 50px 10px 50px;
+    @include pb_box-shadow(1px, 11px, 68px, -20px, rgba($black,.75));
+
+    @include media-breakpoint-down(md) {
+        padding: 30px;
+    }
 }
 
 // inputs
