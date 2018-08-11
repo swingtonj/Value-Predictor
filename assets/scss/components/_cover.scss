@@ -99,7 +99,7 @@
 	}
 	> .container {
 		position: relative;
-		> .row {
+		> .rows {
 			padding: 7em 0;
 			@include media-breakpoint-down(sm) {
 				height: inherit;
@@ -420,4 +420,7 @@
 	right: 0;
 	bottom: 0;
 	background: rgba($black, .7);
+}
+.padding-small{
+    padding:4em;
 }

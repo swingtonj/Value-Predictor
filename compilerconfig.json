@@ -1,14 +1,26 @@
 ﻿[
-  {
-    "outputFile": "assets/css/style.css",
-    "inputFile": "assets/scss/style.scss"
-  },
-  {
-    "outputFile": "assets/css/bootstrap/bootstrap.css",
-    "inputFile": "assets/scss/bootstrap/bootstrap.scss"
-  },
-  {
-    "outputFile": "assets/css/landing-2.css",
-    "inputFile": "assets/scss/landing-2.scss"
-  }
+    {
+        "outputFile": "assets/css/style.css",
+        "inputFile": "assets/scss/style.scss"
+    },
+    {
+        "outputFile": "assets/css/bootstrap/bootstrap.css",
+        "inputFile": "assets/scss/bootstrap/bootstrap.scss"
+    },
+    {
+        "outputFile": "assets/css/landing-2.css",
+        "inputFile": "assets/scss/landing-2.scss"
+    },
+    {
+        "outputFile": "assets/css/results.css",
+        "inputFile": "assets/scss/results.scss"
+    },
+    {
+        "outputFile": "assets/css/Slider/bootstrap-slider.css",
+        "inputFile": "assets/scss/Slider/bootstrap-slider.scss"
+    },
+    {
+        "outputFile": "assets/css/Sensitivity.css",
+        "inputFile": "assets/scss/Sensitivity.scss"
+    }
 ]

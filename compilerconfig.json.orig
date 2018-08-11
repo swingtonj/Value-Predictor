@@ -1,0 +1,17 @@
+﻿[
+  {
+    "outputFile": "assets/css/style.css",
+    "inputFile": "assets/scss/style.scss"
+  },
+  {
+    "outputFile": "assets/css/bootstrap/bootstrap.css",
+    "inputFile": "assets/scss/bootstrap/bootstrap.scss"
+<<<<<<< HEAD
+  },
+  {
+    "outputFile": "assets/css/landing-2.css",
+    "inputFile": "assets/scss/landing-2.scss"
+=======
+>>>>>>> 331cbd6101406e5d81b06933f9a5c2b0bdf573d4
+  }
+]

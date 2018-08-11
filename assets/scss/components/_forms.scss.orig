@@ -1,5 +1,9 @@
 .pb_form_v1 {
+<<<<<<< HEAD
+    padding: 10px 50px 10px 50px;
+=======
     padding: 10px 25px 10px 25px;
+>>>>>>> 331cbd6101406e5d81b06933f9a5c2b0bdf573d4
     @include pb_box-shadow(1px, 11px, 68px, -20px, rgba($black,.75));
 
     @include media-breakpoint-down(md) {
