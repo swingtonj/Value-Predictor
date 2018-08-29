@@ -23,7 +23,7 @@
   .pb_slant-white:after {
     content: "";
     position: absolute;
-    bottom: -125px;
+    bottom: -115px;
     left: -50px;
     height: 200px;
     width: 130%;
@@ -76,4 +76,7 @@
 }*/
 .tooltip-main {
   opacity: 1 !important; }
+
+.pb_xl_py_cover:after {
+  background: white !important; }
 

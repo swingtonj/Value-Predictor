@@ -1280,7 +1280,7 @@ a {
       color: #868e96; }
 
 .pb_footer {
-  padding: 5em 0; }
+  padding: 10em 0; }
   .pb_footer .list-unstyled li {
     margin-bottom: 10px;
     line-height: 1.5; }
@@ -1599,8 +1599,8 @@ Edit in JSFiddle Result HTML CSS JavaScript Resources section.pricing {
 
 .pricing .card .card-header h5, .compareheader {
   min-height: 60px;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 30px;
+  line-height: 60px;
   vertical-align: middle; }
 
 .compareheader {
@@ -1814,7 +1814,7 @@ Edit in JSFiddle Result HTML CSS JavaScript Resources section.pricing {
 .card .card-header-success:not(.card-header-icon):not(.card-header-text), .card.bg-success,
 .card.card-rotate.bg-success .front,
 .card.card-rotate.bg-success .back {
-  background: linear-gradient(60deg, #66bb6a, #43a047); }
+  background: linear-gradient(60deg, #F7FBF7, #CDD0CD); }
 
 .card .card-header-warning .card-icon,
 .card .card-header-warning .card-text,
@@ -1868,7 +1868,7 @@ Edit in JSFiddle Result HTML CSS JavaScript Resources section.pricing {
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(76, 175, 80, 0.4); }
 
 .card [class*="card-header-"], .card[class*="bg-"] {
-  color: #fff; }
+  color: black; }
 
 .card [class*="card-header-"] .card-title a,
 .card [class*="card-header-"] .card-title,
@@ -2097,10 +2097,10 @@ Edit in JSFiddle Result HTML CSS JavaScript Resources section.pricing {
   color: rgba(255, 255, 255, 0.62); }
 
 .card [class*="card-header-"] .ct-chart .ct-label {
-  color: rgba(255, 255, 255, 0.7); }
+  color: rgba(0, 0, 0, 0.9); }
 
 .card [class*="card-header-"] .ct-chart .ct-grid {
-  stroke: rgba(255, 255, 255, 0.2); }
+  stroke: rgba(0, 0, 0, 0.2); }
 
 .card [class*="card-header-"] .ct-chart .ct-series-a .ct-point,
 .card [class*="card-header-"] .ct-chart .ct-series-a .ct-line,
@@ -2145,4 +2145,25 @@ Edit in JSFiddle Result HTML CSS JavaScript Resources section.pricing {
 
 .card .card-plain .card-header-icon {
   margin-right: 15px !important; }
+
+.card [class*="card-header-"] .ct-chart .ct-series-a .ct-bar {
+  stroke: #00CA4C;
+  stroke-width: 40px; }
+
+.card [class*="card-header-"] .ct-chart .ct-series-b .ct-bar {
+  stroke: #1d82ff;
+  stroke-width: 40px; }
+
+.ct-chart {
+  height: 200px;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.9); }
+
+.ct-label {
+  text-align: center;
+  justify-content: center;
+  display: flex; }
+
+.pbheader {
+  background: linear-gradient(60deg, #26c6da, #00acc1); }
 

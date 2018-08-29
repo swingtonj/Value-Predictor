@@ -1,108 +1,110 @@
 demo = {
 
-  initDashboardPageCharts: function() {
+    initDashboardPageCharts: function () {
 
-    if ($('#dailySalesChart').length != 0 || $('#completedTasksChart').length != 0 || $('#websiteViewsChart').length != 0) {
-      /* ----------==========     Daily Sales Chart initialization    ==========---------- */
+        /* ----------==========     Daily Sales Chart initialization    ==========---------- */
 
-      dataDailySalesChart = {
-        labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-        series: [
-          [12, 17, 7, 17, 23, 18, 38]
-        ]
-      };
+        dataProductivityChart = {
+            labels: ['C-level executive', 'IT personnel ', 'Organizational'],
+            series: [
+                [12, 17, 7],
+                [10, 15, 5]
+            ]
+        };
+        dataCostsChart = {
+            labels: ['Software Acquisition', 'System Acquisition', 'Operations'],
+            series: [
+                [12, 17, 7],
+                [10, 15, 5]
+            ]
+        };
+        dataRevenuesProfitChart = {
+            labels: ['End-to-End Security', 'Improved governance and compliance', 'Reduced downtime'],
+            series: [
+                [12, 17, 7],
+                [10, 15, 5]
+            ]
+        };
+        dataRisksChart = {
+            labels: ['Improved Revenue', 'Faster-time-to-value', 'Trusted Experiences'],
+            series: [
+                [12, 17, 7],
+                [10, 15, 5]
+            ]
+        };
+        dataRoiChart = {
+            labels: ['Z14', 'X86'],
+            series: 
+                [12, 17]
+        };
+        dataPaybackChart = {
+            labels: ['Z14', 'X86'],
+            series: 
+                [12, 17]
+        };
 
-      optionsDailySalesChart = {
-        lineSmooth: Chartist.Interpolation.cardinal({
-          tension: 0
-        }),
-        low: 0,
-        high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
-        chartPadding: {
-          top: 0,
-          right: 0,
-          bottom: 0,
-          left: 0
-        },
-      }
+        optionsChart = {
+            low: 0,
+            high: 25,
+            chartPadding: {
+                top: 0,
+                right: 0,
+                bottom: 0,
+                left: 0
+            },
+            seriesBarDistance: 50,
+            lineSmooth: Chartist.Interpolation.cardinal({
+                tension: 0
+            }),
 
-      var dailySalesChart = new Chartist.Line('#dailySalesChart', dataDailySalesChart, optionsDailySalesChart);
-      var dailySalesChart1 = new Chartist.Line('#dailySalesChart1', dataDailySalesChart, optionsDailySalesChart);
-
-      md.startAnimationForLineChart(dailySalesChart);
-      md.startAnimationForLineChart(dailySalesChart1);
-
-
-
-      /* ----------==========     Completed Tasks Chart initialization    ==========---------- */
-
-      dataCompletedTasksChart = {
-          labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-          series: [
-              [12, 17, 7, 17, 23, 18, 38]
-              ]
-      };
-
-      optionsCompletedTasksChart = {
-        lineSmooth: Chartist.Interpolation.cardinal({
-          tension: 0
-        }),
-        low: 0,
-        high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
-        chartPadding: {
-          top: 0,
-          right: 0,
-          bottom: 0,
-          left: 0
-        }
-      }
-
-      var completedTasksChart = new Chartist.Line('#completedTasksChart', dataCompletedTasksChart, optionsCompletedTasksChart);
-      var completedTasksChart1 = new Chartist.Line('#completedTasksChart1', dataCompletedTasksChart, optionsCompletedTasksChart);
-
-      // start animation for the Completed Tasks Chart - Line Chart
-      md.startAnimationForLineChart(completedTasksChart);
-      md.startAnimationForLineChart(completedTasksChart1);
-
-
-      /* ----------==========     Emails Subscription Chart initialization    ==========---------- */
-
-      var dataWebsiteViewsChart = {
-          labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-          series: [
-              [12, 17, 7, 17, 23, 18, 38]
-          ]
-      };
-      var optionsWebsiteViewsChart = {
-        axisX: {
-          showGrid: false
-        },
-        low: 0,
-        high: 50,
-        chartPadding: {
-          top: 0,
-          right: 5,
-          bottom: 0,
-          left: 0
-        }
-      };
-      var responsiveOptions = [
-        ['screen and (max-width: 640px)', {
-          seriesBarDistance: 5,
-          axisX: {
-            labelInterpolationFnc: function(value) {
-              return value[0];
+            axisY: {
+                labelInterpolationFnc: function (value) {
+                    return '$' + value
+                },
+                scaleMinSpace: 15
             }
-          }
-        }]
-      ];
-      var websiteViewsChart = Chartist.Bar('#websiteViewsChart', dataWebsiteViewsChart, optionsWebsiteViewsChart, responsiveOptions);
-      var websiteViewsChart1 = Chartist.Bar('#websiteViewsChart1', dataWebsiteViewsChart, optionsWebsiteViewsChart, responsiveOptions);
+        };
 
-      //start animation for the Emails Subscription Chart
-      md.startAnimationForBarChart(websiteViewsChart);
-      md.startAnimationForBarChart(websiteViewsChart1);
+        optionsChartdistributed = {
+            low: 0,
+            high: 25,
+            chartPadding: {
+                top: 0,
+                right: 0,
+                bottom: 0,
+                left: 0
+            },
+            seriesBarDistance: 50,
+            lineSmooth: Chartist.Interpolation.cardinal({
+                tension: 0
+            }),
+            distributeSeries: true,
+            axisY: {
+                labelInterpolationFnc: function (value) {
+                    return '$' + value
+                },
+                scaleMinSpace: 15
+            }
+        };
+
+
+        var divProductivityChart = new Chartist.Bar('#divProductivityChart', dataProductivityChart, optionsChart);
+        var divCostsChart = new Chartist.Bar('#divCostsChart', dataCostsChart, optionsChart);
+        var divRevenuesProfitChart = new Chartist.Bar('#divRevenuesProfitChart', dataRevenuesProfitChart, optionsChart);
+        var divRisksChart = new Chartist.Bar('#divRisksChart', dataRisksChart, optionsChart);
+
+        var divRoiChart = new Chartist.Bar('#divRoiChart', dataRoiChart, optionsChartdistributed);
+        var divPaybackChart = new Chartist.Bar('#divPaybackChart', dataPaybackChart, optionsChartdistributed);
+
+
+
+        md.startAnimationForLineChart(divProductivityChart);
+        md.startAnimationForLineChart(divCostsChart);
+        md.startAnimationForLineChart(divRevenuesProfitChart);
+        md.startAnimationForLineChart(divRisksChart);
+        md.startAnimationForLineChart(divRoiChart);
+        md.startAnimationForLineChart(divPaybackChart);
+
     }
-  }
 
 }
