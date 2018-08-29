@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/results.css">
     <link href="assets/css/Slider/bootstrap-slider.min.css" rel="stylesheet" />
-
+    <link href="assets/css/chartist-plugin-legend.css" rel="stylesheet" />
 </head>
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
     <nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light" id="pb-navbar">
@@ -35,7 +35,7 @@
                     <!--<li class="nav-item"><a class="nav-link" href="#section-home">Summary</a></li>-->
                     <li class="nav-item"><a class="nav-link" href="#section-comparison">Results</a></li>
                     <li class="nav-item"><a class="nav-link" href="#section-metrics">Benefits</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#section-KFM">Metrics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#section-KFM">Summary</a></li>
                     <!--<li class="nav-item"><a class="nav-link" href="sensitivity.html">Sensitivity</a></li>-->
                     <li class="nav-item cta-btn ml-xl-2 ml-lg-2 ml-md-0 ml-sm-0 ml-0"><a class="nav-link" href="index.html" target=""><span class="pb_rounded-4 px-4">Logout</span></a></li>
                 </ul>
@@ -51,8 +51,17 @@
                 <div class="col-md-6">
                     <h2 class="heading mb-3">Your Personalized Results</h2>
                     <div class="sub-heading">
-                        <p class="mb-4">Here are your personalized results for your specific IT Solution. Results are reported for three cases: A Generic Analytics Solution, IBM Analytics Solution and IBM Analytics Solution with Financing. </p>
-                        <p class="mb-4">The model uses industry and best practices data for your industry, analytics type and business imperative. It also considers your investment size, risks, and other value drivers including IBM specific value drivers: time to value, staff productivity, flexibility, simplicity, trust, ecosystem, interest rates, term, and more. </p>
+                        <p class="mb-4">
+                            Here are your personalized results for your specific situation. Results are reported for both the
+                            IBM System Z14 and an x86 system that has the same acquisition cost.
+                        </p>
+                        <p class="mb-4">
+                            The model uses industry and best practices data for your industry, analytics type and business
+                            imperative. It also considers your investment size, risks, and other value drivers including
+                            specific cost and value drivers: system costs, software costs, operations costs, staff productivity
+                            by roles, organization productivity, faster time to value, improved revenues, trusted
+                            experiences, lower downtime, better security, governance and compliance.
+                        </p>
                         <!--<p class="mb-5"><a class="btn btn-success btn-lg pb_btn-pill smoothscroll" href="#section-login"><span class="pb_font-14 text-uppercase pb_letter-spacing-1">Login</span></a></p>-->
                     </div>
                 </div>
@@ -155,6 +164,140 @@
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-md-6 text-center">
+                    <h5 class="text-uppercase pb_font-15 mb-2 pb_color-light-opacity-9 pb_letter-spacing-2"><strong>Metrics</strong></h5>
+                    <h2>
+                        Key Financial Metrics
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card card-chart pbheader">
+                        <div class="card-header card-header-success">
+                            <div class="ct-chart" id="divRoiChart"></div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                Return on Investment
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card card-chart pbheader">
+                        <div class="card-header card-header-success">
+                            <div class="ct-chart" id="divPaybackChart"></div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                Payback Period
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- END section -->
+    <section class="pb_xl_py_cover overflow-hidden pb_slant-light pb_gradient_v1 cover-bg-opacity-8" style="background-image: url(assets/images/1900x1200_img_5.jpg)" id="section-metrics">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-6 text-center">
+                    <h5 class="text-uppercase pb_font-15 mb-2 pb_color-light-opacity-9 pb_letter-spacing-2"><strong>Metrics</strong></h5>
+                    <h2>
+                        Benefits
+                    </h2>
+                </div>
+            </div>
+            <div class="row quad">
+                <div class="col-md-12 quadrant-box-align-center">
+                    <div class="bluebox quadrant-box">Direct</div>
+                </div>
+                <div class="col-md-6 br-right br-bottom br-right-green br-bottom-blue">
+                    <div class="card card-chart">
+                        <div class="card-header card-header-success">
+                            <div class="ct-chart" id="divProductivityChart"></div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                2. Productivity
+                            </h4>
+                            <!--<p class="card-category">
+                                Length of time(quarters) required to recover the cost of an investment.
+                            </p>-->
+                        </div>
+                        <!--<div class="card-footer">
+                            <div class="stats">
+                                An IBM Analytics Solution with Financing reduces your Payback Period by 78% compared with a Generic Analytics Solution.
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+                <div class="col-md-6 br-bottom br-bottom-blue">
+                    <div class="card card-chart">
+                        <div class="card-header card-header-success">
+                            <div class="ct-chart" id="divCostsChart"></div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                1. Costs
+                            </h4>
+                            <!--<p class="card-category">Difference between the present value of cash inflows and the present value of cash outflows</p>-->
+                        </div>
+                        <!--<div class="card-footer">
+                            <div class="stats">
+                                An IBM Analytics Solution with Financing increases your Net Present Value (NPV) by 113% compared with a Generic Analytics Solution.
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+                <div class="col-md-6 br-right br-right-green">
+                    <div class="card card-chart">
+                        <div class="card-header card-header-success">
+                            <div class="ct-chart" id="divRevenuesProfitChart"></div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">3. Revenues/Profits</h4>
+                            <!--<p class="card-category">Measures the gain or loss generated on an investment relative to the amount of money invested.</p>-->
+                        </div>
+                        <!--<div class="card-footer">
+                            <div class="stats">
+                                An IBM Analytics Solution with Financing improves your ROI by 57% compared with a Generic Analytics Solution.
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card card-chart">
+                        <div class="card-header card-header-success">
+                            <div class="ct-chart" id="divRisksChart"></div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">4. Risks</h4>
+                            <!--<p class="card-category">
+                                interest rate at which the net present value of all the cash flows (both positive and negative) from a project or investment equals zero
+                            </p>-->
+                        </div>
+                        <!--<div class="card-footer">
+                            <div class="stats">
+                                An IBM Analytics Solution with Financing significantly enhances your Internal Rate of Return (IRR) by 818% compared with a Generic Analytics Solution.
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+                <div class="col-md-12 quadrant-box-align-center">
+                    <div class="bluebox-light quadrant-box">Derived</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END section -->
+
+    <section class="pb_section pb_slant-white pricing" id="section-KFM">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-6 text-center">
                     <h5 class="text-uppercase pb_font-15 mb-2 pb_color-dark-opacity-3 pb_letter-spacing-2"><strong>Summary</strong></h5>
                     <h2>Predicted Results</h2>
                 </div>
@@ -180,15 +323,7 @@
                                     <hr>
                                 </li>
                                 <li>
-                                    Net Present Value
-                                    <hr>
-                                </li>
-                                <li>
                                     Return On Investment
-                                    <hr>
-                                </li>
-                                <li>
-                                    Internal Rate of Return
                                 </li>
                             </ul>
                         </div>
@@ -205,18 +340,10 @@
                             <!--<h6 class="card-price text-center">$0<span class="period"></span></h6>-->
                             <ul class="fa-ul">
                                 <li>
-                                    <span class="fa-li"><i class="fas fa-check"></i></span>4.87   <hr>
+                                    <span class="fa-li"><i class="fas fa-check"></i></span>363 <hr>
                                 </li>
                                 <li>
-                                    <span class="fa-li"><i class="fas fa-check"></i></span>$2,213,957   <hr>
-
-                                </li>
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-check"></i></span>285%   <hr>
-
-                                </li>
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-check"></i></span>22%
+                                    <span class="fa-li"><i class="fas fa-check"></i></span>5.88
 
                                 </li>
                             </ul>
@@ -234,19 +361,11 @@
                         <div class="card-body">
                             <ul class="fa-ul">
                                 <li>
-                                    <span class="fa-li"><i class="fas fa-check"></i></span>4.42   <hr>
+                                    <span class="fa-li"><i class="fas fa-check"></i></span>56  <hr>
 
                                 </li>
                                 <li>
-                                    <span class="fa-li"><i class="fas fa-check"></i></span>$2,823,895   <hr>
-
-                                </li>
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-check"></i></span>325%   <hr>
-
-                                </li>
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-check"></i></span>25%
+                                    <span class="fa-li"><i class="fas fa-check"></i></span>17.15
 
                                 </li>
                             </ul>
@@ -283,133 +402,6 @@
                         </div>
                     </div>
                 </div>-->
-            </div>
-        </div>
-    </section>
-    <!-- END section -->
-    <section class="pb_xl_py_cover overflow-hidden pb_slant-light pb_gradient_v1 cover-bg-opacity-8" style="background-image: url(assets/images/1900x1200_img_5.jpg)" id="section-metrics">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-md-6 text-center">
-                    <h5 class="text-uppercase pb_font-15 mb-2 pb_color-light-opacity-9 pb_letter-spacing-2"><strong>Metrics</strong></h5>
-                    <h2>
-                        Benefits
-                    </h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card card-chart">
-                        <div class="card-header card-header-success">
-                            <div class="ct-chart" id="divProductivityChart"></div>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                2. Productivity
-                            </h4>
-                            <!--<p class="card-category">
-                                Length of time(quarters) required to recover the cost of an investment.
-                            </p>-->
-                        </div>
-                        <!--<div class="card-footer">
-                            <div class="stats">
-                                An IBM Analytics Solution with Financing reduces your Payback Period by 78% compared with a Generic Analytics Solution.
-                            </div>
-                        </div>-->
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card card-chart">
-                        <div class="card-header card-header-success">
-                            <div class="ct-chart" id="divCostsChart"></div>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                1. Costs
-                            </h4>
-                            <!--<p class="card-category">Difference between the present value of cash inflows and the present value of cash outflows</p>-->
-                        </div>
-                        <!--<div class="card-footer">
-                            <div class="stats">
-                                An IBM Analytics Solution with Financing increases your Net Present Value (NPV) by 113% compared with a Generic Analytics Solution.
-                            </div>
-                        </div>-->
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card card-chart">
-                        <div class="card-header card-header-success">
-                            <div class="ct-chart" id="divRevenuesProfitChart"></div>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">3. Revenues/Profits</h4>
-                            <!--<p class="card-category">Measures the gain or loss generated on an investment relative to the amount of money invested.</p>-->
-                        </div>
-                        <!--<div class="card-footer">
-                            <div class="stats">
-                                An IBM Analytics Solution with Financing improves your ROI by 57% compared with a Generic Analytics Solution.
-                            </div>
-                        </div>-->
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card card-chart">
-                        <div class="card-header card-header-success">
-                            <div class="ct-chart" id="divRisksChart"></div>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">4. Risks</h4>
-                            <!--<p class="card-category">
-                                interest rate at which the net present value of all the cash flows (both positive and negative) from a project or investment equals zero
-                            </p>-->
-                        </div>
-                        <!--<div class="card-footer">
-                            <div class="stats">
-                                An IBM Analytics Solution with Financing significantly enhances your Internal Rate of Return (IRR) by 818% compared with a Generic Analytics Solution.
-                            </div>
-                        </div>-->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END section -->
-
-    <section class="pb_section pb_slant-white" id="section-KFM">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-md-6 text-center">
-                    <h5 class="text-uppercase pb_font-15 mb-2 pb_color-light-opacity-9 pb_letter-spacing-2"><strong>Metrics</strong></h5>
-                    <h2>
-                        Key Financial Metrics
-                    </h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card card-chart pbheader">
-                        <div class="card-header card-header-success">
-                            <div class="ct-chart" id="divRoiChart"></div>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                Return on Investment
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card card-chart pbheader">
-                        <div class="card-header card-header-success">
-                            <div class="ct-chart" id="divPaybackChart"></div>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                Payback Period
-                            </h4>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -476,6 +468,9 @@
 
     <!-- Chartist JS -->
     <script src="assets/js/chartist.min.js"></script>
+    <script src="assets/js/chartist-plugin-legend.min.js"></script>
+    <script src="assets/js/chartist-plugin-pointlabels.min.js"></script>
+    <script src="assets/js/Chartist-pointlabels.js"></script>
 
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="assets/js/material-dashboard.min.js?v=2.1.0" type="text/javascript"></script>

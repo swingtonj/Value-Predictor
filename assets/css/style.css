@@ -2162,8 +2162,90 @@ Edit in JSFiddle Result HTML CSS JavaScript Resources section.pricing {
 .ct-label {
   text-align: center;
   justify-content: center;
-  display: flex; }
+  display: flex;
+  line-height: 12px;
+  align-items: flex-end;
+  text-anchor: end;
+  font-size: 0.8rem; }
 
 .pbheader {
   background: linear-gradient(60deg, #26c6da, #00acc1); }
+
+@media only screen and (min-width: 600px) {
+  .br-right {
+    border-right: solid 1px; }
+  .br-left {
+    border-left: solid 1px; }
+  .br-top {
+    border-top: solid 1px; }
+  .br-bottom {
+    border-bottom: solid 1px; }
+  .br-dotted-right {
+    border-right: dotted 1px; }
+  .br-dotted-left {
+    border-left: dotted 1px; }
+  .br-dotted-top {
+    border-top: dotted 1px; }
+  .br-dotted-bottom {
+    border-bottom: dotted 1px; }
+  .br-right-green {
+    border-right-color: rgba(0, 0, 0, 0.5); }
+  .br-bottom-blue {
+    border-bottom-color: rgba(0, 0, 0, 0.5); } }
+
+.greenbox {
+  background: #00ca4c; }
+
+.greenbox-light {
+  background: rgba(0, 202, 76, 0.5); }
+
+.bluebox {
+  background: #1d82ff; }
+
+.bluebox-light {
+  background: rgba(29, 130, 255, 0.5); }
+
+.quadrant-box {
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  width: 150px;
+  margin: 0 auto;
+  border-radius: 5px; }
+
+.quadrant-box-align-center {
+  text-align: center; }
+
+.quad:before {
+  content: 'Business';
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  height: 150px;
+  writing-mode: vertical-lr;
+  margin: auto 0;
+  border-radius: 5px;
+  background: #00ca4c;
+  position: absolute;
+  vertical-align: middle;
+  top: 50%;
+  left: -30px; }
+
+.quad:after {
+  content: 'Technical';
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  height: 150px;
+  writing-mode: vertical-lr;
+  margin: auto 0;
+  border-radius: 5px;
+  background: rgba(0, 202, 76, 0.5);
+  position: absolute;
+  vertical-align: middle;
+  top: 50%;
+  right: -30px; }
 

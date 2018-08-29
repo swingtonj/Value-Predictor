@@ -1,3 +1,6 @@
+
+
+
 demo = {
 
     initDashboardPageCharts: function () {
@@ -7,69 +10,97 @@ demo = {
         dataProductivityChart = {
             labels: ['C-level executive', 'IT personnel ', 'Organizational'],
             series: [
-                [12, 17, 7],
-                [10, 15, 5]
+                {
+                    name: 'X86',
+                    data: [179.2, 877.8, 897]
+                }, {
+                    name: 'Z14',
+                    data: [216, 997.5, 975]}
             ]
         };
         dataCostsChart = {
             labels: ['Software Acquisition', 'System Acquisition', 'Operations'],
             series: [
-                [12, 17, 7],
-                [10, 15, 5]
+                {
+                    name: 'X86',
+                    data: [957, 1682.2, 546.1]
+                }, {
+                    name: 'Z14',
+                    data: [668.9, 399.4, 205.4]
+                }
             ]
         };
         dataRevenuesProfitChart = {
             labels: ['End-to-End Security', 'Improved governance and compliance', 'Reduced downtime'],
             series: [
-                [12, 17, 7],
-                [10, 15, 5]
+                {
+                    name: 'X86',
+                    data: [1512, 840, 186.4]
+                }, {
+                    name: 'Z14',
+                    data: [1680, 1064, 207.2]
+                }
             ]
         };
         dataRisksChart = {
             labels: ['Improved Revenue', 'Faster-time-to-value', 'Trusted Experiences'],
             series: [
-                [12, 17, 7],
-                [10, 15, 5]
+                {
+                    name: 'X86',
+                    data: [846.8, 801, 546.4]
+                }, {
+                    name: 'Z14',
+                    data: [1004.5, 885, 764.9]
+                }
             ]
         };
         dataRoiChart = {
-            labels: ['Z14', 'X86'],
+            labels: ['X86', 'Z14'],
             series: 
-                [12, 17]
+                [56, 363]
         };
         dataPaybackChart = {
-            labels: ['Z14', 'X86'],
+            labels: ['X86', 'Z14'],
             series: 
-                [12, 17]
+                [5.88, 17.15]
         };
 
         optionsChart = {
-            low: 0,
-            high: 25,
             chartPadding: {
-                top: 0,
+                top: 30,
                 right: 0,
-                bottom: 0,
+                bottom: 20,
                 left: 0
             },
-            seriesBarDistance: 50,
+            seriesBarDistance: 40,
             lineSmooth: Chartist.Interpolation.cardinal({
                 tension: 0
             }),
-
+            
             axisY: {
                 labelInterpolationFnc: function (value) {
                     return '$' + value
-                },
-                scaleMinSpace: 15
-            }
+                }, offset: 50
+            },
+            plugins: [
+                Chartist.plugins.legend({
+                    position: 'top'
+                })
+                ,
+                Chartist.plugins.ctBarLabels()
+                //Chartist.plugins.ctPointLabels({
+                //    textAnchor: 'middle', labelOffset: {
+                //        x: 0,
+                //        y: -10
+                //    },
+                //    labelInterpolationFnc: function (value) { return '$' + value.toFixed(2) }
+                //})
+            ]
         };
 
         optionsChartdistributed = {
-            low: 0,
-            high: 25,
             chartPadding: {
-                top: 0,
+                top: 50,
                 right: 0,
                 bottom: 0,
                 left: 0
@@ -82,9 +113,18 @@ demo = {
             axisY: {
                 labelInterpolationFnc: function (value) {
                     return '$' + value
-                },
-                scaleMinSpace: 15
-            }
+                },  offset: 50
+            },
+            plugins: [
+                Chartist.plugins.ctBarLabels()
+                //Chartist.plugins.ctPointLabels({
+                //    textAnchor: 'middle', labelOffset: {
+                //        x: 0,
+                //        y: -10
+                //    },
+                //    labelInterpolationFnc: function (value) { return '$' + value.toFixed(2) }
+                //})
+            ]
         };
 
 
