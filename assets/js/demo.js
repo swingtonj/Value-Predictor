@@ -19,7 +19,7 @@ demo = {
             ]
         };
         dataCostsChart = {
-            labels: ['Software Acquisition', 'System Acquisition', 'Operations'],
+            labels: ['System Acquisition', 'Software Acquisition', 'Operations'],
             series: [
                 {
                     name: 'X86',
@@ -31,7 +31,8 @@ demo = {
             ]
         };
         dataRevenuesProfitChart = {
-            labels: ['End-to-End Security', 'Improved governance and compliance', 'Reduced downtime'],
+            labels: ['Improved Revenue', 'Faster-time-to-value', 'Trusted Experiences'],
+            
             series: [
                 {
                     name: 'X86',
@@ -43,7 +44,7 @@ demo = {
             ]
         };
         dataRisksChart = {
-            labels: ['Improved Revenue', 'Faster-time-to-value', 'Trusted Experiences'],
+            labels: ['End-to-End Security', 'Improved governance and compliance', 'Reduced downtime'],
             series: [
                 {
                     name: 'X86',
@@ -62,7 +63,7 @@ demo = {
         dataPaybackChart = {
             labels: ['X86', 'Z14'],
             series: 
-                [5.88, 17.15]
+                [17.15, 5.88]
         };
 
         optionsChart = {
@@ -98,7 +99,7 @@ demo = {
             ]
         };
 
-        optionsChartdistributed = {
+        optionsChartdistributed_ROI = {
             chartPadding: {
                 top: 50,
                 right: 0,
@@ -112,18 +113,32 @@ demo = {
             distributeSeries: true,
             axisY: {
                 labelInterpolationFnc: function (value) {
-                    return '$' + value
+                    return value +'%'
                 },  offset: 50
             },
             plugins: [
-                Chartist.plugins.ctBarLabels()
-                //Chartist.plugins.ctPointLabels({
-                //    textAnchor: 'middle', labelOffset: {
-                //        x: 0,
-                //        y: -10
-                //    },
-                //    labelInterpolationFnc: function (value) { return '$' + value.toFixed(2) }
-                //})
+                Chartist.plugins.ctBarLabels_percentage()
+            ]
+        };
+        optionsChartdistributed_PB = {
+            chartPadding: {
+                top: 50,
+                right: 0,
+                bottom: 0,
+                left: 0
+            },
+            seriesBarDistance: 50,
+            lineSmooth: Chartist.Interpolation.cardinal({
+                tension: 0
+            }),
+            distributeSeries: true,
+            axisY: {
+                labelInterpolationFnc: function (value) {
+                    return  value
+                }, offset: 50
+            },
+            plugins: [
+                Chartist.plugins.ctBarLabels_null()
             ]
         };
 
@@ -133,8 +148,8 @@ demo = {
         var divRevenuesProfitChart = new Chartist.Bar('#divRevenuesProfitChart', dataRevenuesProfitChart, optionsChart);
         var divRisksChart = new Chartist.Bar('#divRisksChart', dataRisksChart, optionsChart);
 
-        var divRoiChart = new Chartist.Bar('#divRoiChart', dataRoiChart, optionsChartdistributed);
-        var divPaybackChart = new Chartist.Bar('#divPaybackChart', dataPaybackChart, optionsChartdistributed);
+        var divRoiChart = new Chartist.Bar('#divRoiChart', dataRoiChart, optionsChartdistributed_ROI);
+        var divPaybackChart = new Chartist.Bar('#divPaybackChart', dataPaybackChart, optionsChartdistributed_PB);
 
 
 
